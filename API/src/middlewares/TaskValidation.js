@@ -7,15 +7,15 @@ const TaskValidation = async(req,res,next) => {
     const { macaddress, type, title, description, when } =  req.body;
 
     if(!macaddress)
-    return res.status(400).json({error: 'macaddress é obrigatorio'});
+    return res.status(400).json({error: 'macaddress é obrigatório'});
     else if(!type)
-    return res.status(400).json({error: 'type é obrigatorio'});
+    return res.status(400).json({error: 'type é obrigatório'});
     else if(!description)
-    return res.status(400).json({error: 'descritption é obrigatorio'});
+    return res.status(400).json({error: 'descritption é obrigatório'});
     else if(!title)
-    return res.status(400).json({error: 'titulo é obrigatorio'});
+    return res.status(400).json({error: 'título é obrigatório'});
     else if(!when)
-    return res.status(400).json({error: 'Data e Hora são obrigatorios'});
+    return res.status(400).json({error: 'Data e Hora são obrigatórios'});
     else{
         let exists;
 
@@ -28,7 +28,7 @@ const TaskValidation = async(req,res,next) => {
                           });
         }else{
             if(!when)
-                  return res.status(400).json({error: 'Data e Hora são obrigatorios'});
+                  return res.status(400).json({error: 'Data e Hora são obrigatórios'});
         exists = await TaskModel.
             findOne(
               { 

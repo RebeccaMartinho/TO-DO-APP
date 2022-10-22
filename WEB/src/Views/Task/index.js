@@ -99,7 +99,7 @@ function Task({match}){
                     }
                 </S.TypeIcons>
                 <S.Input>
-                    <span>Titulo</span>
+                    <span>Título</span>
                     <input type="text" placeholder="Titulo da tarefa"  
                         onChange={e => setTitle(e.target.value)} value={title}/>
                 </S.Input>
@@ -122,7 +122,7 @@ function Task({match}){
                 <S.Options>
                     <div>
                         <input type="checkbox" checked={done} onChange={()=>setDone(!done)}/>
-                        <span>CONCLUIDO</span>
+                        <span>CONCLUÍDO</span>
                     </div>
                    { match.params.id && <button onClick={Remove}>EXCLUIR</button>}
                 </S.Options>
